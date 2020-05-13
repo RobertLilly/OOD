@@ -1,0 +1,30 @@
+﻿<Window x:Class="OOD_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOD_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="677" Width="587.6"
+        Loaded="Window_Loaded">
+    <Grid Margin="0,0,2.8,0">
+        <ComboBox x:Name="CbxSection" HorizontalAlignment="Left" Margin="146,57,0,0" VerticalAlignment="Top" Width="130" Height="36" FontSize="18" SelectionChanged="CbxSection_SelectionChanged" />
+        <Label x:Name="labelStockSection" Content="Stock Section " HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="136" FontSize="20" Height="35" FontWeight="Medium" Foreground="#FF5FB2EC"/>
+        <Label x:Name="labelProducts" Content="Products " HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="89" Height="32" FontSize="20" FontWeight="Medium" Foreground="#FF5FB2EC"/>
+        <TextBlock x:Name="DisplayCaseSize" HorizontalAlignment="Left" Margin="303,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="38"><Run Text="Case size "/><Run Text="  "/><Run Text=" &#x9;"/><Run Text="  "/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="DisplayStockLeft" HorizontalAlignment="Left" Margin="303,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="41"><Run Text="Stock left "/><Run Text="  "/><Run Text="&#x9;"/><Run Text="  "/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="DisplaySupplier" HorizontalAlignment="Left" Margin="303,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="44"><Run Text="Supplier "/><Run Text="   "/><Run Text="&#x9;"/><Run Text="  "/><Run Text=":"/><Run Text=" "/></TextBlock>
+        <TextBlock x:Name="DisplayOrderDay" HorizontalAlignment="Left" Margin="303,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="45"><Run Text="Order  day "/><Run Text="&#x9;"/><Run Text="  "/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <Label Content="Product Stock Information" HorizontalAlignment="Left" Margin="303,121,0,0" VerticalAlignment="Top" Width="265" Height="32" FontSize="20" FontWeight="Medium" Foreground="#FF5FB2EC"/>
+        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="451,598,0,0" VerticalAlignment="Top" Width="116" Height="32" FontSize="18" FontWeight="ExtraBlack" Click="button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="303,567,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" FontSize="16" Height="26" RenderTransformOrigin="0.503,0.615"><Run Text="Order (By Case)"/><Run Text="&#x9;"/><Run Text="  "/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="OrderInput" HorizontalAlignment="Left" Height="23" Margin="451,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" FontSize="16"/>
+        <ListBox x:Name="LbxProducts" HorizontalAlignment="Left" Height="458" Margin="10,172,0,0" VerticalAlignment="Top" Width="266" SelectionChanged="LbxProducts_SelectionChanged" DisplayMemberPath="Name"/>
+        <Label Content="Stock Order" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="154" Height="47" FontSize="26" FontWeight="SemiBold" Grid.IsSharedSizeScope="True" Foreground="#FF3667E8"/>
+        <TextBlock x:Name="DisplayUnitCost" HorizontalAlignment="Left" Margin="302,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="45"><Run Text="Unit Cost"/><Run Text="&#x9;"/><Run Text="  "/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="DisplayUnitSell" HorizontalAlignment="Left" Margin="302,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="45"><Run Text="Unit Sell"/><Run Text="&#x9;"/><Run Text="  "/><Run Text="              "/><Run Text=" "/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="DisplayProfitMargin" HorizontalAlignment="Left" Margin="302,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="45"><Run Text="Profit Margin &#x9;"/><Run Text="  :"/></TextBlock>
+        <TextBlock x:Name="DisplayProfitMarginp" HorizontalAlignment="Left" Margin="303,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="265" Height="45"><Run Text="Profit Margin &#x9;"/><Run Text="  "/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>
